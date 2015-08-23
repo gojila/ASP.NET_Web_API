@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AngulaJS_ExampleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MOBILE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="age" Type="bigint" />
+    <Property Name="id" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="imageUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" />
+    <Property Name="snippet" Type="nvarchar" MaxLength="250" />
+    <Property Name="detail" Type="nvarchar(max)" />
+    <Property Name="sorted" Type="bigint" />
+    <Property Name="isDelete" Type="bit" />
+    <Property Name="isActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" />
+    <Property Name="price" Type="money" />
+    <Property Name="descriptions" Type="nvarchar" MaxLength="250" />
+    <Property Name="is_show" Type="bit" />
+    <Property Name="is_deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" />
+    <Property Name="address" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityContainer Name="AngulaJS_ExampleModelStoreContainer">
+    <EntitySet Name="MOBILE" EntityType="Self.MOBILE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUCT" EntityType="Self.PRODUCT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AngulaJS_ExampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MOBILE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="age" Type="Int64" />
+    <Property Name="id" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="imageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="snippet" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="sorted" Type="Int64" />
+    <Property Name="isDelete" Type="Boolean" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="descriptions" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="is_show" Type="Boolean" />
+    <Property Name="is_deleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="AngulaJS_ExampleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MOBILE" EntityType="Self.MOBILE" />
+    <EntitySet Name="PRODUCT" EntityType="Self.PRODUCT" />
+    <EntitySet Name="Student" EntityType="Self.Student" />
+  </EntityContainer>
+</Schema>
